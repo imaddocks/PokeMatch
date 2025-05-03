@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./icons/pokematch-pixel-logo-500.png" type="image/png">
+  <title>PokéMatch | Learn Pokémon Type Matchups Visually</title>
+  <meta name="description" content="PokéMatch is a fun, mobile-friendly tool to learn Pokémon type matchups. Instantly see what each type is strong or weak against, with icons and logic tips.">
+  <meta name="keywords" content="Pokémon, type chart, type matchups, PokéMatch, strong against, weak against, Pokémon types, visual tool">
+  <meta name="author" content="Rhoam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="PokéMatch – Visual Pokémon Type Chart" />
+  <meta property="og:description" content="A fun, fast way to learn which types are strong or weak – with icons, tips, and matchups!" />
+</head>
+<body>
+  
+  <a href="#typeGrid" class="skip-link">Skip to main content</a>
+  
+  <header>
+    <a href="/" class="site-header-link">
+      <img src="icons/pokematch-pixel-logo-500.png" alt="PokéMatch logo" class="header-logo">
+      <h1 class="site-title">PokéMatch</h1>
+    </a>
+  </header>
+
+  <h2 class="instructions">Select a Pokémon type to begin:</h2>
+
+  <section class="type-grid" id="typeGrid" tabindex="-1" role="main"></section>
+
+  <h2 class="instructions">Now choose whether you want to see strengths or weaknesses:</h2>
+
+  <section class="mode-toggle">
+    <button id="strongBtn" onclick="setMode('strong')">Strong Against</button>
+    <button id="weakBtn" class="weak" onclick="setMode('weak')">Weak Against</button>
+  </section>
+
+  <section class="results" id="results"></section>
+
+  <section class="reset-button">
+    <button onclick="resetType()">Reset Type</button>
+  </section>
+
+  <footer>
+    <p>
+      <a href="/">Home</a> |
+      <a href="terms-conditions.html">Terms & Conditions</a> |
+      <a href="https://rhoam.co.uk" target="_blank">Rhoam</a> |
+      &copy; <span id="year"></span>
+    </p>
+  </footer>
+
+  <script src="types.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
