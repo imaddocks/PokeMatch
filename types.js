@@ -1,6 +1,8 @@
 const typeData = {
   Normal: {
-    strong: [],
+    strong: [
+      { type: 'None', tip: 'Normal has no strength' }
+    ],
     weak: [
       { type: 'Fighting', tip: 'Muscle overcomes average strength' }
     ],
