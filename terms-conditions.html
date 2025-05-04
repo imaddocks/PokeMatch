@@ -105,5 +105,26 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    We use cookies to improve your experience and show relevant ads. 
+    By using this site, you agree to our 
+    <a href="terms-conditions.html#cookies">cookie use</a>.
+  </p>
+  <button id="cookie-accept">Got it</button>
+</div>
+
+  <script>
+  if (!localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+
+  document.getElementById('cookie-accept').addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+</script>
+  
 </body>
 </html>
