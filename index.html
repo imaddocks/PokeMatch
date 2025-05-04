@@ -81,30 +81,5 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const banner = document.getElementById('cookie-banner');
-    const button = document.getElementById('cookie-accept');
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-      banner.style.display = 'flex';
-    }
-
-    button.addEventListener('click', function () {
-      localStorage.setItem('cookiesAccepted', 'true');
-      banner.style.display = 'none';
-    });
-  });
-</script>
-
-  <div id="cookie-banner" class="cookie-banner">
-  <p>
-    We use cookies to improve your experience and show relevant ads.
-    By using this site, you agree to our
-    <a href="terms-conditions/#cookies">cookie use</a>.
-  </p>
-  <button id="cookie-accept">Got it</button>
-</div>
-
 </body>
 </html>
