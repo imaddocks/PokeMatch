@@ -81,25 +81,30 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-  <div id="cookie-banner" class="cookie-banner" role="alert" aria-live="polite">
-    <p>
-      We use cookies to improve your experience and show relevant ads.
-      By using this site, you agree to our
-      <a href="terms-conditions.html#cookies">cookie use</a>.
-    </p>
-    <button id="cookie-accept">Got it</button>
-  </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const banner = document.getElementById('cookie-banner');
+    const button = document.getElementById('cookie-accept');
 
-  <script>
     if (!localStorage.getItem('cookiesAccepted')) {
-      document.getElementById('cookie-banner').style.display = 'flex';
+      banner.style.display = 'flex';
     }
 
-    document.getElementById('cookie-accept').addEventListener('click', function () {
+    button.addEventListener('click', function () {
       localStorage.setItem('cookiesAccepted', 'true');
-      document.getElementById('cookie-banner').style.display = 'none';
+      banner.style.display = 'none';
     });
-  </script>
+  });
+</script>
+
+  <div id="cookie-banner" class="cookie-banner">
+  <p>
+    We use cookies to improve your experience and show relevant ads.
+    By using this site, you agree to our
+    <a href="terms-conditions.html#cookies">cookie use</a>.
+  </p>
+  <button id="cookie-accept">Got it</button>
+</div>
 
 </body>
 </html>
