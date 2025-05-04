@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="="en">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="./icons/pokematch-pixel-logo-500.png" type="image/png">
   <title>PokéMatch | Learn Pokémon Type Matchups Visually</title>
-  <meta name="description" content="PokéMatch is a fun, mobile-friendly tool to learn Pokémon type matchups. Instantly see what each type is strong or weak against, with icons and logic tips.">
-  <meta name="keywords" content="Pokémon, type chart, type matchups, PokéMatch, strong against, weak against, Pokémon types, visual tool">
-  <meta name="author" content="Rhoam">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="PokéMatch – Visual Pokémon Type Chart" />
-  <meta property="og:description" content="A fun, fast way to learn which types are strong or weak – with icons, tips, and matchups!" />
+  <meta name="description" content="PokéMatch is a fun, mobile-friendly tool to learn Pokémon type matchups. Instantly see what each type is strong or weak against, with icons and memorable logic tips." />
+  <meta name="keywords" content="Pokémon, type chart, type matchups, PokéMatch, strong against, weak against, Pokémon types, visual Pokémon tool, learn Pokémon" />
+  <meta name="author" content="Rhoam" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="PokéMatch - Visual Pokémon Type Chart" />
+  <meta property="og:description" content="A fun, fast way to learn which Pokémon types are strong or weak - with icons, tips, and visual matchups!" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:url" content="http://pokematch.co.uk/" /> -->
+  <!-- <meta property="og:image" content="http://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" /> -->
+
+  <link rel="icon" href="icons/pokematch-pixel-logo-500.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  
+
   <a href="#typeGrid" class="skip-link">Skip to main content</a>
-  
+
   <header>
     <a href="index.html" class="site-header-link">
       <img src="icons/pokematch-pixel-logo-500.png" alt="PokéMatch logo" class="header-logo">
@@ -24,35 +30,76 @@
     </a>
   </header>
 
-  <h2 class="instructions">Select a Pokémon type to begin:</h2>
+  <main>
+    <h2 class="instructions">Select a Pokémon type to begin:</h2>
 
-  <section class="type-grid" id="typeGrid" tabindex="-1" role="main"></section>
+    <section class="type-grid" id="typeGrid" tabindex="-1" role="main"></section>
 
-  <h2 class="instructions">Now choose whether you want to see strengths or weaknesses:</h2>
+    <h2 class="instructions">Now choose whether you want to see strengths or weaknesses:</h2>
 
-  <section class="mode-toggle">
-    <button id="strongBtn" onclick="setMode('strong')">Strong Against</button>
-    <button id="weakBtn" class="weak" onclick="setMode('weak')">Weak Against</button>
-  </section>
+    <section class="mode-toggle">
+      <button id="strongBtn" onclick="setMode('strong')">Strong Against</button>
+      <button id="weakBtn" class="weak" onclick="setMode('weak')">Weak Against</button>
+    </section>
 
-  <section class="results" id="results"></section>
+    <section class="results" id="results"></section>
 
-  <section class="reset-button">
-    <button onclick="resetType()">Reset Type</button>
-  </section>
+    <section class="reset-button">
+      <button onclick="resetType()">Reset Type</button>
+    </section>
+
+    <section class="about-section">
+      <h2>About PokéMatch</h2>
+      <p><strong>PokéMatch is a fan-made tool designed to help you understand Pokémon type matchups in a way that actually sticks.</strong></p>
+      <p>Instead of memorising long type charts, you'll find simple, visual answers like: <em>Water puts out Fire. Bugs don't like Fire. Electricity zaps Flying types.</em> All paired with icons and memory tips to make it easier to learn and remember.</p>
+      <p>I originally built PokéMatch to help myself. Playing through Scarlet and Violet, especially the Tera Raids, I realised just how tricky things can get. Some Pokémon have multiple types, some have Tera Types, and suddenly you're not just guessing - you're losing.</p>
+      <p>I needed a tool that let me instantly check type strengths and weaknesses, and understand <em>why</em> those matchups made sense. The first time I used PokéMatch during a 5-star Tera Raid against an Orthworm, it worked. I picked the right type and actually won.</p>
+      <p>Since then, it's become my mission: learn the matchups, win more raids, and stock up on enough Herba Mystica to make the best sandwiches in all of Paldea 🧢 🥪</p>
+      <p>If you're on the same journey, this site's for you.</p>
+    </section>
+
+    <section class="donation-section">
+      <h2>Support PokéMatch</h2>
+      <p>If you've found this tool useful and would like to help cover hosting and development costs, consider making a small donation.</p>
+      <a href="https://ko-fi.com/pokematch" target="_blank" class="donate-button">Buy me a coffee ☕</a>
+    </section>
+
+  </main>
 
   <footer>
     <p>
       <a href="index.html">Home</a> |
       <a href="terms-conditions.html">Terms & Conditions</a> |
+      <a href="terms-conditions.html#privacy">Privacy Policy</a> |
       <a href="https://rhoam.co.uk" target="_blank">Rhoam</a> |
       &copy; <span id="year"></span>
     </p>
   </footer>
 
   <script src="types.js"></script>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <div id="cookie-banner" class="cookie-banner" role="alert" aria-live="polite">
+    <p>
+      We use cookies to improve your experience and show relevant ads.
+      By using this site, you agree to our
+      <a href="terms-conditions.html#cookies">cookie use</a>.
+    </p>
+    <button id="cookie-accept">Got it</button>
+  </div>
+
+  <script>
+    if (!localStorage.getItem('cookiesAccepted')) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', function () {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    });
   </script>
 
 </body>
