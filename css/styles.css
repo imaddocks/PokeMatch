@@ -416,6 +416,10 @@ footer a:hover {
   flex-shrink: 0;
 }
 
+.cookie-banner.hide {
+  display: none;
+}
+
 @media (max-width: 400px) {
   .cookie-banner {
     flex-direction: column;

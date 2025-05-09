@@ -60,14 +60,16 @@ fetch('/partials/header.html')
     const savedTheme = localStorage.getItem('theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     setTheme(savedTheme);
-    console.log('Theme on first load:', savedTheme);
   });
 
 // === Load the footer HTML and update the year ===
 fetch('/partials/footer.html')
   .then(res => res.text())
   .then(data => {
+    // Insert the footer HTML
     document.getElementById('footer').innerHTML = data;
+
+    // === Update year dynamically ===
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -75,7 +77,6 @@ fetch('/partials/footer.html')
     const backToTopBtn = document.querySelector(".back-to-top");
 
     if (backToTopBtn) {
-      // Show/hide button on scroll
       window.addEventListener("scroll", () => {
         if (window.scrollY > 200) {
           backToTopBtn.classList.add("show");
@@ -84,10 +85,28 @@ fetch('/partials/footer.html')
         }
       });
 
-      // Smooth scroll to top on click
       backToTopBtn.addEventListener("click", (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    // === Cookie Banner Logic ===
+
+    // === Cookie Banner Logic ===
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+
+    if (cookieBanner && acceptBtn) {
+      // Show banner only if user hasn't accepted yet
+      if (!localStorage.getItem('cookiesAccepted')) {
+        cookieBanner.style.display = 'flex'; // or block, depending on your layout
+      }
+
+      // On accept, save preference and hide banner
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
       });
     }
   });
