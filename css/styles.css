@@ -700,17 +700,15 @@ body.dark-mode .back-to-top:hover {
   pointer-events: auto;
 }
 
-/* ========== Mobile Split Footer Lines ========== */
+/* ========== Mobile Logo Size ========== */
 
 @media (max-width: 480px) {
-  footer p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3em;
+  .header-logo {
+    height: 28px;
+    margin-bottom: 0.3em;
   }
 
-  footer p a {
-    display: inline;
+  .site-title {
+    font-size: 1.2rem;
   }
 }
