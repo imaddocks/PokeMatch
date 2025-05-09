@@ -37,8 +37,11 @@ body {
 /* ========== Header ========== */
 header {
   background: #ffcb05;
-  padding: 1em 0;
+  padding: 1.5em 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header-inner {
@@ -68,7 +71,6 @@ header {
 .header-actions img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
 }
 
 .site-header-link {
@@ -81,10 +83,9 @@ header {
 }
 
 .header-logo {
-  height: 36px;
+  height: 50px;
   vertical-align: middle;
   margin-right: 0.5em;
-  margin-bottom: 0.5em;
 }
 
 .site-title {
@@ -116,11 +117,7 @@ header {
   z-index: 10;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+
 
 /* ========== Mode Toggle Buttons ========== */
 .mode-toggle {
@@ -471,7 +468,6 @@ body.dark-mode footer {
 #themeToggle img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
 }
 
 @media (max-width: 480px) {
@@ -492,7 +488,6 @@ body.dark-mode footer {
 .gift img {
   width: 32px;
   height: 32px;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
 }
 
 /* ========== Dark Mode Colours ========== */
@@ -667,20 +662,25 @@ body.dark-mode .mobile-nav a {
 
 .back-to-top {
   position: fixed;
-  bottom: 1.5em;
+  bottom: 2.5em;
   right: 1.5em;
   background-color: #2a75bb;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
   width: 44px;
   height: 44px;
-  line-height: 44px;
-  text-align: center;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top img {
+  width: 24px;
+  height: 24px;
 }
 
 .back-to-top:hover {
@@ -689,20 +689,28 @@ body.dark-mode .mobile-nav a {
 
 body.dark-mode .back-to-top {
   background-color: #5daeff;
-  color: #121212;
 }
 
 body.dark-mode .back-to-top:hover {
   background-color: #91cfff;
 }
 
-.back-to-top {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
 .back-to-top.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* ========== Mobile Split Footer Lines ========== */
+
+@media (max-width: 480px) {
+  footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+  }
+
+  footer p a {
+    display: inline;
+  }
 }

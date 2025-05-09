@@ -2,13 +2,13 @@
 fetch('/partials/header.html')
   .then(res => res.text())
   .then(data => {
-    document.getElementById('header').innerHTML = data;
+    document.querySelector('header#header').innerHTML = data;
 
     // === Mobile Nav Toggle (Hamburger Menu) ===
     const hamburger = document.querySelector('.hamburger img');
     const mobileNav = document.getElementById('mobileNav');
-    const originalIcon = '/icons/bars-solid.svg';
-    const closeIcon = '/icons/xmark-solid.svg';
+    const originalIcon = '/icons/bars-solid.png';
+    const closeIcon = '/icons/xmark-solid.png';
 
     if (hamburger && mobileNav) {
       // Toggle menu visibility on hamburger click
