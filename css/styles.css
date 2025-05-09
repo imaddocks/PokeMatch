@@ -1,0 +1,704 @@
+/* ========== Base Layout & Typography ========== */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ========== Skip Link (Accessibility) ========== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #2a75bb;
+  color: white;
+  padding: 0.5em 1em;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ========== Header ========== */
+header {
+  background: #ffcb05;
+  padding: 1em 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
+}
+
+.site-header-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-logo {
+  height: 36px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.site-title {
+  color: #2a75bb;
+  margin: 0;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+#themeToggle img {
+  display: block;
+}
+
+#menuToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ========== Mode Toggle Buttons ========== */
+.mode-toggle {
+  margin: 2em 0 1em;
+}
+
+.mode-toggle button {
+  border: none;
+  padding: 0.5em 1.2em;
+  margin: 0 0.5em;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: white;
+}
+
+#strongBtn {
+  background-color: #4CAF50;
+}
+
+#strongBtn.active {
+  border: 3px solid #388E3C;
+  font-weight: bold;
+}
+
+#weakBtn {
+  background-color: #e53935;
+}
+
+#weakBtn.active {
+  border: 3px solid #b71c1c;
+  font-weight: bold;
+}
+
+/* ========== Type Grid Buttons ========== */
+.type-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 2em auto 1em;
+}
+
+.type-grid button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.6em;
+  padding: 0.6em 1em;
+  background: #e0e0e0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  transition: border-color 0.3s ease;
+}
+
+.type-grid button.selected {
+  border-color: #2a75bb;
+  background: #e0e0e0;
+  color: #2a75bb;
+}
+
+.type-grid img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.3em;
+}
+
+/* ========== Results Section ========== */
+.results {
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.results.strong .result-card {
+  background-color: #e6f4ea;
+  border-left: 6px solid #4CAF50;
+}
+
+.results.weak .result-card {
+  background-color: #fdecea;
+  border-left: 6px solid #e53935;
+}
+
+.result-card {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 400px;
+}
+
+.result-card h3 {
+  margin: 0 0 0.5em;
+  color: #2a75bb;
+}
+
+.type-header-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+.result-type-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+/* ========== Reset Button ========== */
+.reset-button {
+  margin: 2em 0;
+}
+
+.reset-button button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* ========== Instruction Text ========== */
+.instructions {
+  font-size: 1.2rem;
+  color: #2a75bb;
+  margin-top: 2em;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+}
+
+/* ========== About ========== */
+.about-section {
+  background-color: #f7f7f7;
+  padding: 3em 2em;
+  max-width: 600px;
+  margin: 1em auto 2em;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.about-section h2 {
+  color: #2a75bb;
+  margin-top: 0;
+}
+
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  font-family: 'Arial Rounded MT', 'Arial', sans-serif;
+}
+
+/* ========== Donate ========== */
+.donation-section {
+  background-color: #fff8dc;
+  padding: 2em;
+  max-width: 600px;
+  margin: 1em auto 3em;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.donation-section h2 {
+  color: #2a75bb;
+  margin-top: 0;
+}
+
+.donation-section p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+.donate-button {
+  display: inline-block;
+  background-color: #ffcb05;
+  color: #2a75bb;
+  padding: 0.6em 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #f4b800;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #f0f0f0;
+  padding: 1em;
+  font-size: 0.9rem;
+  margin-top: auto;
+  color: #2a75bb;
+  padding-bottom: 2em;
+}
+
+footer a {
+  color: #2a75bb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(22, 22, 181);
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 480px) {
+  .type-grid button {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ========== Terms & Conditions / Static Pages ========== */
+.page-content {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 0 1em;
+  text-align: left;
+}
+
+.page-content h2,
+.page-content h3 {
+  color: #2a75bb;
+}
+
+.page-content p {
+  margin-bottom: 1.5em;
+  font-family: 'Arial Rounded MT', 'Arial', sans-serif;
+}
+
+.page-content a {
+  color: #2a75bb;
+  text-decoration: underline;
+}
+
+.page-content hr {
+  margin: 2em 0;
+}
+
+/* ========== Cookie Banner ========== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2a75bb;
+  color: white;
+  padding: 1em;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  text-align: left;
+  gap: 1em;
+}
+
+.cookie-banner p {
+  margin: 0;
+  flex: 1 1 300px;
+}
+
+.cookie-banner a {
+  color: #ffcb05;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.cookie-banner button {
+  background-color: #ffcb05;
+  color: #2a75bb;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+@media (max-width: 400px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cookie-banner button {
+    width: 100%;
+  }
+}
+
+/* ========== Dark Mode ========== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.site-header-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-decoration: none;
+}
+
+.site-title {
+  color: #2a75bb;
+  font-size: 1.8rem;
+  margin-left: 0.5em;
+}
+
+.hamburger,
+#themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger img,
+#themeToggle img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
+}
+
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.4rem;
+  }
+}
+
+.gift {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.gift img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(32%) sepia(92%) saturate(1135%) hue-rotate(192deg) brightness(90%) contrast(95%);
+}
+
+/* ========== Dark Mode Colours ========== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .site-title,
+body.dark-mode .instructions,
+body.dark-mode .donation-section h2,
+body.dark-mode .about-section h2 {
+  color: #ffe066;
+}
+
+body.dark-mode .mode-toggle button {
+  color: white;
+  opacity: 0.95;
+}
+
+body.dark-mode .type-grid button {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+body.dark-mode .type-grid button.selected {
+  background-color: #5daeff;
+  color: white;
+}
+
+body.dark-mode .results .result-card {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-mode .results.strong .result-card {
+  background-color: #234e39;
+  border-left-color: #4CAF50;
+}
+
+body.dark-mode .results.weak .result-card {
+  background-color: #502828;
+  border-left-color: #e53935;
+}
+
+body.dark-mode .results .result-card h3 {
+  color: #ffcb05;
+}
+
+body.dark-mode .donation-section {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+body.dark-mode .donate-button {
+  background-color: #ffcb05;
+  color: #2a75bb;
+}
+
+body.dark-mode .cookie-banner {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .cookie-banner a {
+  color: #ffe066;
+}
+
+body.dark-mode .cookie-banner button {
+  background-color: #ffe066;
+  color: #5daeff;
+}
+body.dark-mode .about-section {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+body.dark-mode .about-section h2 {
+  color: #ffe066;
+}
+
+body.dark-mode .about-section p {
+  color: #f5f5f5;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #5daeff;
+}
+
+body.dark-mode footer a {
+  color: #5daeff;
+}
+
+body.dark-mode footer a:hover {
+  color: #ffe066;
+}
+
+/* ========== Dark Mode: Terms & Conditions / Static Pages ========== */
+body.dark-mode .page-content {
+  color: #f5f5f5;
+}
+
+body.dark-mode .page-content h2,
+body.dark-mode .page-content h3 {
+  color: #ffe066;
+}
+
+body.dark-mode .page-content p {
+  color: #f5f5f5;
+}
+
+body.dark-mode .page-content a {
+  color: #5daeff;
+}
+
+body.dark-mode .page-content hr {
+  border-color: #444;
+}
+
+/* ========== Hamburger Navigation ========== */
+
+.mobile-nav {
+  display: none;
+  background-color: #ffcb05;
+  padding: 1em;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 1em;
+}
+
+.mobile-nav a {
+  color: #2a75bb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mobile-nav.show {
+  display: block;
+}
+
+/* Optional: style for dark mode */
+body.dark-mode .mobile-nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .mobile-nav a {
+  color: #ffe066;
+}
+
+/* ========== Back to Top Sticky ========== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  background-color: #2a75bb;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #1b4f91;
+}
+
+body.dark-mode .back-to-top {
+  background-color: #5daeff;
+  color: #121212;
+}
+
+body.dark-mode .back-to-top:hover {
+  background-color: #91cfff;
+}
+
+.back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}

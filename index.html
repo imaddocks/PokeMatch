@@ -15,19 +15,14 @@
   <meta property="og:url" content="https://pokematch.co.uk/" />
   <meta property="og:image" content="http://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" />
   <link rel="icon" href="icons/pokematch-pixel-logo-500.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
-<body>
+<body id="top">
 
   <a href="#typeGrid" class="skip-link">Skip to main content</a>
 
-  <header>
-    <a href="/" class="site-header-link">
-      <img src="icons/pokematch-pixel-logo-500.png" alt="PokéMatch logo" class="header-logo">
-      <h1 class="site-title">PokéMatch</h1>
-    </a>
-  </header>
+  <div id="header"></div>
 
   <main>
     <h2 class="instructions">Select a Pokémon type to begin:</h2>
@@ -65,21 +60,11 @@
 
   </main>
 
-  <footer>
-    <p>
-      <a href="/">Home</a> |
-      <a href="terms-conditions">Terms & Conditions</a> |
-      <a href="terms-conditions/#privacy">Privacy Policy</a> |
-      <a href="https://rhoam.co.uk" target="_blank">Rhoam</a> |
-      &copy; <span id="year"></span>
-    </p>
-  </footer>
+  <div id="footer"></div>
 
-  <script src="types.js"></script>
+  <script src="/js/layout.js" defer></script>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="/js/types.js"></script>
 
 </body>
 </html>

@@ -14,18 +14,13 @@
   <meta property="og:url" content="https://pokematch.co.uk/" />
   <meta property="og:image" content="https://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" />
   <link rel="icon" href="../icons/pokematch-pixel-logo-500.png" type="image/png" />
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
-<body>
+<body id="top">
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <header>
-    <a href="/" class="site-header-link">
-      <img src="../icons/pokematch-pixel-logo-500.png" alt="PokéMatch logo" class="header-logo">
-      <h1 class="site-title">PokéMatch</h1>
-    </a>
-  </header>
+  <div id="header"></div>
 
   <main id="main" class="page-content">
     <h2>Terms & Conditions</h2>
@@ -92,19 +87,9 @@
     <p>By using this site, you consent to the use of these cookies. You may disable cookies at any time by adjusting your browser settings. Note that doing so may affect the functionality of certain features on the site.</p>
   </main>
 
-  <footer>
-    <p>
-      <a href="/">Home</a> |
-      <a href="/">Terms & Conditions</a> |
-      <a href="/#privacy">Privacy Policy</a> |
-      <a href="https://rhoam.co.uk" target="_blank">Rhoam</a> |
-      &copy; <span id="year"></span>
-    </p>
-  </footer>
+  <div id="footer"></div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="/js/layout.js" defer></script>
   
 </body>
 </html>
