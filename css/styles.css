@@ -712,3 +712,14 @@ body.dark-mode .back-to-top:hover {
     font-size: 1.2rem;
   }
 }
+
+/* Prevent menu overflow on mobile */
+.mobile-nav {
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
