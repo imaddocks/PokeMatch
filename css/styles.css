@@ -560,11 +560,11 @@ body.dark-mode .cookie-banner {
 }
 
 body.dark-mode .cookie-banner a {
-  color: #ffe066;
+  color: #ffcb05;
 }
 
 body.dark-mode .cookie-banner button {
-  background-color: #ffe066;
+  background-color:#ffcb05;
   color: #5daeff;
 }
 body.dark-mode .about-section {
@@ -662,7 +662,7 @@ body.dark-mode .mobile-nav a {
 
 .back-to-top {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 3em;
   right: 1.5em;
   background-color: #2a75bb;
   width: 44px;
