@@ -4,102 +4,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms & Conditions | PokéMatch</title>
-  <meta name="description" content="Read the Terms & Conditions for PokéMatch, including usage, content ownership, cookies, and contact information." />
-  <meta name="robots" content="noindex, follow" />
+  <title>PokéMatch | Learn Pokémon Type Matchups Visually</title>
+  <meta name="description" content="PokéMatch is a fun, mobile-friendly tool to learn Pokémon type matchups. Instantly see what each type is strong or weak against, with icons and memorable logic tips." />
+  <meta name="keywords" content="Pokémon, type chart, type matchups, PokéMatch, strong against, weak against, Pokémon types, visual Pokémon tool, learn Pokémon" />
   <meta name="author" content="Rhoam" />
-  <meta property="og:title" content="PokéMatch - Terms & Conditions" />
-  <meta property="og:description" content="Review how PokéMatch handles site use, cookies, and rights." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="PokéMatch - Visual Pokémon Type Chart" />
+  <meta property="og:description" content="A fun, fast way to learn which Pokémon types are strong or weak - with icons, tips, and visual matchups!" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pokematch.co.uk/" />
-  <meta property="og:image" content="https://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" />
-  <link rel="icon" href="../icons/pokematch-pixel-logo-500.png" type="image/png" />
+  <meta property="og:image" content="http://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" />
+  <link rel="icon" href="icons/pokematch-pixel-logo-500.png" type="image/png" />
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBB292EQMB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBB292EQMB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-RBB292EQMB');
-  </script>
+  gtag('config', 'G-RBB292EQMB');
+</script>
 
 </head>
 
 <body id="top">
-  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <a href="#typeGrid" class="skip-link">Skip to main content</a>
 
   <header id="header"></header>
 
-  <main id="main" class="page-content">
-    <h2>Terms & Conditions</h2>
-    <p><strong>Last updated:</strong> 2nd May 2025</p>
+  <main>
+    <h2 class="instructions">Select a Pokémon type to begin:</h2>
 
-    <h3>1. Introduction</h3>
-    <p>Welcome to PokéMatch, a tool created by Rhoam to help users explore and understand Pokémon type matchups in a fun, visual way. By accessing or using this website, you agree to be bound by the following terms and conditions. If you do not agree with these terms, please refrain from using the website.</p>
+    <section class="type-grid" id="typeGrid" tabindex="-1" role="main"></section>
 
-    <h3>2. Usage</h3>
-    <p>PokéMatch is intended for educational and entertainment purposes only. It is a fan-made project and is not officially affiliated with, endorsed by, or sponsored by The Pokémon Company, Nintendo, Game Freak, or any related entities. Use of the site is at your own discretion and should not be considered official Pokémon advice or strategy.</p>
+    <h2 class="instructions">Now choose whether you want to see strengths or weaknesses:</h2>
 
-    <h3>3. Intellectual Property</h3>
-    <p>All original content on this site-including but not limited to layout, code, icons, visual prompts, and wording-is the intellectual property of Rhoam unless otherwise credited. Any trademarks, including the Pokémon name and type icons, are the property of their respective owners and are used here under fair use in a non-commercial, fan-made context.</p>
+    <section class="mode-toggle">
+      <button id="strongBtn" onclick="setMode('strong')">Strong Against</button>
+      <button id="weakBtn" class="weak" onclick="setMode('weak')">Weak Against</button>
+    </section>
 
-    <h3>4. Limitations</h3>
-    <p>While we strive to keep PokéMatch accurate and up to date, we do not make any guarantees regarding the accuracy, completeness, or reliability of the content. The information is provided “as is” without warranties of any kind. Rhoam shall not be held liable for any damages resulting from the use or inability to use the site.</p>
+    <section class="results" id="results"></section>
 
-    <h3>5. Changes</h3>
-    <p>We may revise these terms at any time without prior notice. The most current version will always be available on this page. Continued use of PokéMatch after changes are made implies your acceptance of the updated terms.</p>
+    <section class="reset-button">
+      <button onclick="resetType()">Reset Type</button>
+    </section>
 
-    <h3>6. Cookies</h3>
-    <p>PokéMatch may use basic cookies to enhance user experience and remember your selected settings or preferences. These are not used for advertising or tracking across other websites. By using the site, you consent to the use of these cookies. You may disable cookies in your browser settings if you prefer not to allow them.</p>
+    <section class="about-section">
+      <h2>About PokéMatch</h2>
+      <p><strong>PokéMatch is a fan-made tool designed to help you understand Pokémon type matchups in a way that actually sticks.</strong></p>
+      <p>Instead of memorising long type charts, you'll find simple, visual answers like: <em>Water puts out Fire. Bugs don't like Fire. Electricity zaps Flying types.</em> All paired with icons and memory tips to make it easier to learn and remember.</p>
+      <p>I originally built PokéMatch to help myself. Playing through Scarlet and Violet, especially the Tera Raids, I realised just how tricky things can get. Some Pokémon have multiple types, some have Tera Types, and suddenly you're not just guessing - you're losing.</p>
+      <p>I needed a tool that let me instantly check type strengths and weaknesses, and understand <em>why</em> those matchups made sense. The first time I used PokéMatch during a 5-star Tera Raid against an Orthworm, it worked. I picked the right type and actually won.</p>
+      <p>Since then, it's become my mission: learn the matchups, win more raids, and stock up on enough Herba Mystica to make the best sandwiches in all of Paldea 🧢 🥪</p>
+      <p>If you're on the same journey, this site's for you.</p>
+    </section>
 
-    <h3>7. Use by Children</h3>
-    <p>PokéMatch is designed to be family-friendly and accessible to all ages. However, we recommend that children under the age of 13 use the site under adult supervision. We do not knowingly collect any personal data from children. If you are a parent or guardian and believe your child has provided personal information, please contact us and we will promptly remove it.</p>
+    <section class="donation-section">
+      <h2>Support PokéMatch</h2>
+      <p>If you've found this tool useful and would like to help cover hosting and development costs, consider making a small donation.</p>
+      <a href="https://ko-fi.com/pokematch" target="_blank" class="donate-button">Buy me a coffee ☕</a>
+    </section>
 
-    <h3>8. Contact</h3>
-    <p>If you have any questions or concerns about these Terms & Conditions, please reach out to us at <a href="mailto:contact@rhoam.co.uk">contact@rhoam.co.uk</a>.</p>
-
-    <hr>
-
-    <h2 id="privacy" class="section-heading">Privacy Policy</h2>
-    <p><strong>Last updated:</strong> 2nd May 2025</p>
-
-    <h3>1. Introduction</h3>
-    <p>This Privacy Policy explains how PokéMatch (created by Rhoam) collects, uses, and protects any information you may share while using this website. We are committed to respecting your privacy and handling your data transparently and responsibly.</p>
-
-    <h3>2. What Data We Collect</h3>
-    <p>PokéMatch does not directly collect personal information such as names, email addresses, or contact details. However, some non-identifying technical data may be collected automatically through standard web analytics tools (such as page visits, device type, or screen size) for the purpose of improving site performance and usability.</p>
-
-    <h3>3. How We Use Your Information</h3>
-    <p>Any information collected-either directly or through third-party tools-is used solely to improve the user experience on PokéMatch. We do not sell, share, or rent your data to third parties.</p>
-
-    <h3>4. Third-Party Services</h3>
-    <p>PokéMatch may use third-party services such as Google AdSense to display ads, which may use cookies and similar technologies to serve relevant content. These services may collect limited usage data to deliver and optimise advertising. Please refer to their privacy policies for more details.</p>
-
-    <h3>5. Your Rights</h3>
-    <p>You are entitled to know what personal data, if any, is stored about you, and to request that it be updated or deleted. While we do not actively store personal data, we will respond promptly to any related requests.</p>
-
-    <h3>6. Data Security</h3>
-    <p>We take reasonable steps to protect this website from unauthorised access, loss, or misuse. However, no method of online transmission or storage is 100% secure.</p>
-
-    <h3>7. Changes to This Policy</h3>
-    <p>This privacy policy may be updated from time to time to reflect changes in technology, regulation, or service. You are encouraged to review it periodically.</p>
-
-    <h3>8. Contact</h3>
-    <p>If you have any questions about this privacy policy, please get in touch at <a href="mailto:contact@rhoam.co.uk">contact@rhoam.co.uk</a>.</p>
-
-    <hr>
-
-    <h3 id="cookies">Cookies</h3>
-    <p>PokéMatch uses cookies to improve your browsing experience. These cookies may remember settings such as your chosen type or mode between visits. In addition, cookies may be set by third-party services such as Google AdSense to display relevant ads. These third-party cookies may use anonymous browsing data to personalise content or measure performance.</p>
-
-    <p>By using this site, you consent to the use of these cookies. You may disable cookies at any time by adjusting your browser settings. Note that doing so may affect the functionality of certain features on the site.</p>
   </main>
 
   <div id="footer"></div>
 
   <script src="/js/layout.js" defer></script>
-  
+
+  <script src="/js/types.js"></script>
+
 </body>
 </html>
