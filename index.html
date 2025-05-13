@@ -77,17 +77,21 @@
 
   <script src="/js/types.js"></script>
 
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const kofiLink = document.querySelector('a[href*="ko-fi.com/pokematch"]');
 
     if (kofiLink) {
+      console.log('Ko-fi link found! Adding GA click tracking.');
       kofiLink.addEventListener('click', () => {
+        console.log('Ko-fi link clicked – sending to GA...');
         gtag('event', 'kofi_click', {
           event_category: 'engagement',
           event_label: 'Ko-fi Support'
         });
       });
+    } else {
+      console.log('Ko-fi link not found.');
     }
   });
 </script>
