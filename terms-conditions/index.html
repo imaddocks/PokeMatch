@@ -101,6 +101,21 @@
   <div id="footer"></div>
 
   <script src="/js/layout.js" defer></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const kofiLink = document.querySelector('a[href*="ko-fi.com/pokematch"]');
+
+    if (kofiLink) {
+      kofiLink.addEventListener('click', () => {
+        gtag('event', 'kofi_click', {
+          event_category: 'engagement',
+          event_label: 'Ko-fi Support'
+        });
+      });
+    }
+  });
+</script>
   
 </body>
 </html>
