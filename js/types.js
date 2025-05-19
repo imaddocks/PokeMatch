@@ -180,11 +180,11 @@ const typeData = {
   },
   Dragon: {
     strong: [
-      { type: 'Dragon', tip: 'A dragon fears none but its own kind.' }
+      { type: 'Dragon', tip: 'A dragon fears none but its own kind' }
     ],
     weak: [
       { type: 'Ice', tip: 'Dragons are coldblooded' },
-      { type: 'Dragon', tip: 'A dragon fears none but its own kind.' },
+      { type: 'Dragon', tip: 'A dragon fears none but its own kind' },
       { type: 'Fairy', tip: 'Fairy tales beat dragons' }
     ],
     icon: 'icons/dragon.png'
