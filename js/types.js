@@ -4,21 +4,21 @@ const typeData = {
       { type: 'None', tip: 'Normal has no strength' }
     ],
     weak: [
-      { type: 'Fighting', tip: 'Muscle overcomes average strength' }
+      { type: 'Fighting', tip: 'Muscle overpowers average strength' }
     ],
     icon: 'icons/normal.png'
   },
   Fire: {
     strong: [
       { type: 'Grass', tip: 'Fire burns grass' },
-      { type: 'Bug', tip: 'Bugs don’t like fire' },
+      { type: 'Bug', tip: 'Bugs burn easily' },
       { type: 'Ice', tip: 'Fire melts ice' },
-      { type: 'Steel', tip: 'Fire melts metal' },
+      { type: 'Steel', tip: 'Fire melts steel' },
     ],
     weak: [
       { type: 'Water', tip: 'Water puts out fire' },
       { type: 'Rock', tip: 'Rock smothers flames' },
-      { type: 'Ground', tip: 'Earth buries fire' },
+      { type: 'Ground', tip: 'Earth smothers fire' },
     ],
     icon: 'icons/fire.png'
   },
@@ -30,33 +30,33 @@ const typeData = {
     ],
     weak: [
       { type: 'Electric', tip: 'Water conducts electricity' },
-      { type: 'Grass', tip: 'Plants drink the water dry' },
+      { type: 'Grass', tip: 'Grass drinks water' },
     ],
     icon: 'icons/water.png'
   },
   Fighting: {
     strong: [
-      { type: 'Normal', tip: 'Fighting overwhelms average strength' },
+      { type: 'Normal', tip: 'Muscle overcomes average strength' },
       { type: 'Rock', tip: 'Punches crack rocks' },
-      { type: 'Steel', tip: 'Strong punches dent metal' },
-      { type: 'Ice', tip: 'Smashes through ice' },
+      { type: 'Steel', tip: 'Punches dent metal' },
+      { type: 'Ice', tip: 'Punches shatter ice' },
       { type: 'Dark', tip: 'Heroes beat villains' }
     ],
     weak: [
       { type: 'Flying', tip: 'Fighters can’t reach flying foes' },
-      { type: 'Psychic', tip: 'Mind over muscle' },
+      { type: 'Psychic', tip: 'Magic outwits muscle' },
       { type: 'Fairy', tip: 'Fairies outwit fighters' }
     ],
     icon: 'icons/fighting.png'
   },
   Flying: {
     strong: [
-      { type: 'Fighting', tip: 'Birds fly to avoid punches' },
+      { type: 'Fighting', tip: 'Fighters can’t reach flying foes' },
       { type: 'Bug', tip: 'Birds eat bugs' },
       { type: 'Grass', tip: 'Birds eat plants' }
     ],
     weak: [
-      { type: 'Electric', tip: 'Birds get zapped' },
+      { type: 'Electric', tip: 'Lightning hits birds' },
       { type: 'Rock', tip: 'Birds crash into rocks' },
       { type: 'Ice', tip: 'Birds migrate in the winter' }
     ],
@@ -64,7 +64,7 @@ const typeData = {
   },
   Poison: {
     strong: [
-      { type: 'Grass', tip: 'Weedkiller poison kills plants' },
+      { type: 'Grass', tip: 'Weedkiller poisons plants' },
       { type: 'Fairy', tip: 'Poison breaks enchantments' }
     ],
     weak: [
@@ -77,9 +77,9 @@ const typeData = {
     strong: [
       { type: 'Fire', tip: 'Earth smothers fire' },
       { type: 'Electric', tip: 'Ground absorbs electricity' },
-      { type: 'Poison', tip: 'Earth buries toxins' },
-      { type: 'Rock', tip: 'Cracks open rocks' },
-      { type: 'Steel', tip: 'Earth corrodes metal' }
+      { type: 'Poison', tip: 'Earth absorbs toxins' },
+      { type: 'Rock', tip: 'Earthquakes shatter rocks' },
+      { type: 'Steel', tip: 'Earth corrodes steel' }
     ],
     weak: [
       { type: 'Water', tip: 'Water turns ground to mud' },
@@ -92,12 +92,12 @@ const typeData = {
     strong: [
       { type: 'Flying', tip: 'Birds crash into rocks' },
       { type: 'Bug', tip: 'Bugs get crushed by rocks' },
-      { type: 'Fire', tip: 'Rocks snuff flames' },
+      { type: 'Fire', tip: 'Rock smothers flames' },
       { type: 'Ice', tip: 'Rocks break ice' }
     ],
     weak: [
-      { type: 'Fighting', tip: 'Punches smash rocks' },
-      { type: 'Ground', tip: 'Earthquakes shatter stone' },
+      { type: 'Fighting', tip: 'Punches crack rocks' },
+      { type: 'Ground', tip: 'Earthquakes shatter rock' },
       { type: 'Steel', tip: 'Metal tools cut rock' },
       { type: 'Water', tip: 'Water erodes rock' },
       { type: 'Grass', tip: 'Plants grow through rock' }
@@ -113,25 +113,25 @@ const typeData = {
     weak: [
       { type: 'Fire', tip: 'Bugs burn easily' },
       { type: 'Flying', tip: 'Birds eat bugs' },
-      { type: 'Rock', tip: 'Bugs get crushed' }
+      { type: 'Rock', tip: 'Bugs get crushed by rocks' }
     ],
     icon: 'icons/bug.png'
   },
   Ghost: {
     strong: [
-      { type: 'Psychic', tip: 'Spirits disturb the mind' },
+      { type: 'Psychic', tip: 'Ghosts disturb the mind' },
       { type: 'Ghost', tip: 'Spirits clash on their own plane' }
     ],
     weak: [
       { type: 'Ghost', tip: 'Spirits clash on their own plane' },
-      { type: 'Dark', tip: 'Shadows overpower spirits' }
+      { type: 'Dark', tip: 'Darkness consumes spirits' }
     ],
     icon: 'icons/ghost.png'
   },
   Steel: {
     strong: [
       { type: 'Ice', tip: 'Pickaxes break ice' },
-      { type: 'Rock', tip: 'Steel breaks rock' },
+      { type: 'Rock', tip: 'Metal tools cut rock' },
       { type: 'Fairy', tip: 'Iron wards off fairy magic' }
     ],
     weak: [
@@ -153,12 +153,12 @@ const typeData = {
   },
   Psychic: {
     strong: [
-      { type: 'Fighting', tip: 'Mind over muscle' },
+      { type: 'Fighting', tip: 'A trained mind resists poison' },
       { type: 'Poison', tip: 'Psychic purifies toxins' }
     ],
     weak: [
-      { type: 'Bug', tip: 'Bugs creep into minds' },
-      { type: 'Ghost', tip: 'Ghosts disturb thoughts' },
+      { type: 'Bug', tip: 'Bugs disturb the mind' },
+      { type: 'Ghost', tip: 'Ghosts disturb the mind' },
       { type: 'Dark', tip: 'Darkness clouds the mind' }
     ],
     icon: 'icons/psychic.png'
@@ -166,9 +166,9 @@ const typeData = {
   Ice: {
     strong: [
       { type: 'Grass', tip: 'Frost kills plants' },
-      { type: 'Ground', tip: 'Freezes and breaks earth' },
-      { type: 'Flying', tip: 'Freezes wings mid-air' },
-      { type: 'Dragon', tip: 'Dragons freeze too' }
+      { type: 'Ground', tip: 'Ground freezes and breaks' },
+      { type: 'Flying', tip: 'Birds migrate in the winter' },
+      { type: 'Dragon', tip: 'Dragons are coldblooded' }
     ],
     weak: [
       { type: 'Fire', tip: 'Fire melts ice' },
@@ -180,11 +180,11 @@ const typeData = {
   },
   Dragon: {
     strong: [
-      { type: 'Dragon', tip: 'Only dragons match dragons' }
+      { type: 'Dragon', tip: 'A dragon fears none but its own kind.' }
     ],
     weak: [
-      { type: 'Ice', tip: 'Even dragons freeze' },
-      { type: 'Dragon', tip: 'Dragon vs. dragon' },
+      { type: 'Ice', tip: 'Dragons are coldblooded' },
+      { type: 'Dragon', tip: 'A dragon fears none but its own kind.' },
       { type: 'Fairy', tip: 'Fairy tales beat dragons' }
     ],
     icon: 'icons/dragon.png'
@@ -192,26 +192,26 @@ const typeData = {
   Grass: {
     strong: [
       { type: 'Water', tip: 'Plants drink water' },
-      { type: 'Ground', tip: 'Roots crack soil' },
-      { type: 'Rock', tip: 'Plants break through rock' }
+      { type: 'Ground', tip: 'Plants grow through soil' },
+      { type: 'Rock', tip: 'Plants grow through rock' }
     ],
     weak: [
-      { type: 'Fire', tip: 'Fire burns plants' },
-      { type: 'Ice', tip: 'Frost wilts plants' },
-      { type: 'Bug', tip: 'Bugs chew leaves' },
+      { type: 'Fire', tip: 'Fire burns grass' },
+      { type: 'Ice', tip: 'Frost kills plants' },
+      { type: 'Bug', tip: 'Bugs eat leaves' },
       { type: 'Flying', tip: 'Birds eat plants' },
-      { type: 'Poison', tip: 'Poison withers growth' }
+      { type: 'Poison', tip: 'Weedkiller poisons plants' }
     ],
     icon: 'icons/grass.png'
   },
   Dark: {
     strong: [
       { type: 'Ghost', tip: 'Darkness consumes spirits' },
-      { type: 'Psychic', tip: 'Dark clouds the mind' }
+      { type: 'Psychic', tip: 'Darkness clouds the mind' }
     ],
     weak: [
-      { type: 'Fighting', tip: 'Bravery beats darkness' },
-      { type: 'Bug', tip: 'Creepy crawlies overwhelm darkness' },
+      { type: 'Fighting', tip: 'Heroes beat villains' },
+      { type: 'Bug', tip: 'Bugs creep in shadows' },
       { type: 'Fairy', tip: 'Light magic defeats dark' }
     ],
     icon: 'icons/dark.png'
@@ -220,11 +220,11 @@ const typeData = {
     strong: [
       { type: 'Fighting', tip: 'Magic outwits muscle' },
       { type: 'Dragon', tip: 'Fairy tales beat dragons' },
-      { type: 'Dark', tip: 'Light defeats shadow' }
+      { type: 'Dark', tip: 'Light magic defeats dark' }
     ],
     weak: [
       { type: 'Steel', tip: 'Iron wards off fairy magic' },
-      { type: 'Poison', tip: 'Toxins ruin purity' }
+      { type: 'Poison', tip: 'Poison breaks enchantments' }
     ],
     icon: 'icons/fairy.png'
   }
