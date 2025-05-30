@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéMatch | 404</title>
+
+  <meta name="description" content="Lost in the tall grass? This PokéMatch page doesn't exist—but you can head back to our type matchup guide and keep learning strong and weak types." />
+  <meta name="keywords" content="Pokémon, type chart, type matchups, PokéMatch, strong against, weak against, Pokémon types, visual Pokémon tool, learn Pokémon" />
+  <meta name="author" content="Rhoam" />
+  <meta name="robots" content="noindex, follow" />
+
+  <meta property="og:title" content="PokéMatch | 404" />
+  <meta property="og:description" content="Lost in the tall grass? This PokéMatch page doesn't exist—but you can head back to our type matchup guide and keep learning strong and weak types." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pokematch.co.uk/" />
+  <meta property="og:image" content="http://pokematch.co.uk/icons/pokematch-pixel-logo-500.png" />
+
+  <link rel="icon" href="icons/pokematch-pixel-logo-500.png" type="image/png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBB292EQMB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-RBB292EQMB');
+    gtag('set', 'user_properties', { traffic_type: 'internal' });
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696408524621735" crossorigin="anonymous"></script>
+</head>
+
+<body id="top">
+  <a href="#typeGrid" class="skip-link">Skip to main content</a>
+
+  <header id="header"></header>
+
+  <main>
+    <h1>404 - Wild Page Not Found!</h1>
+    <p>
+      That page used <em>Teleport</em>!<br />
+      But don't worry, your journey's not over yet.
+    </p>
+    <a href="/">Return to PokéMatch HQ</a>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/js/layout.js" defer></script>
+  <script src="/js/types.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const kofiLink = document.querySelector('a[href*="ko-fi.com/pokematch"]');
+      if (!kofiLink) return;
+
+      kofiLink.addEventListener('click', () => {
+        gtag('event', 'kofi_click', {
+          event_category: 'engagement',
+          event_label: 'Ko-fi Support'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
