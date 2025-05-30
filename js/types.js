@@ -44,7 +44,7 @@ const typeData = {
     ],
     weak: [
       { type: 'Flying', tip: 'Fighters can’t reach flying foes' },
-      { type: 'Psychic', tip: 'Magic outwits muscle' },
+      { type: 'Psychic', tip: 'Mind over muscle' },
       { type: 'Fairy', tip: 'Fairies outwit fighters' }
     ],
     icon: 'icons/fighting.png'
@@ -153,8 +153,8 @@ const typeData = {
   },
   Psychic: {
     strong: [
-      { type: 'Fighting', tip: 'A trained mind resists poison' },
-      { type: 'Poison', tip: 'Psychic purifies toxins' }
+      { type: 'Fighting', tip: 'Mind over muscle' },
+      { type: 'Poison', tip: 'A trained mind resists poison' }
     ],
     weak: [
       { type: 'Bug', tip: 'Bugs disturb the mind' },

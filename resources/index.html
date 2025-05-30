@@ -34,36 +34,37 @@
 
 <body id="top">
 
-  <a href="#typeGrid" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header id="header"></header>
 
-  <main>
-    <h2 class="instructions">Select a Pokémon type to begin:</h2>
+<main id="main-content">
 
-    <section class="type-grid" id="typeGrid" tabindex="-1" role="main"></section>
+  <section class="downloads">
+    <h1>Pokémon Strengths & Weakness Type Charts</h1>
+    <p>Need a quick reference?</p>
+    <p>Download our printable charts to see strengths and weaknesses at a glance.</p>
 
-    <h2 class="instructions">Now choose whether you want to see strengths or weaknesses:</h2>
+    <div class="chart-download">
+      <a href="../images/Pokematch-Strengths-Weaknesses-Type-Chart-Light-Mode.jpg" target="_blank">
+        <img src="../images/Pokematch-Strengths-Weaknesses-Type-Chart-Light-Mode.jpg" alt="Pokemon strengths and weaknesses light mode type chart thumbnail" class="thumbnail">
+      </a>
+      <a href="../images/Pokematch-Strengths-Weaknesses-Type-Chart-Light-Mode.jpg" download class="download-button">Download Light Mode
+      <img src="/icons/sun-solid.png" alt="sun pixel icon"></a>
+    </div>
 
-    <section class="mode-toggle">
-      <button id="strongBtn" onclick="setMode('strong')">Strong Against</button>
-      <button id="weakBtn" class="weak" onclick="setMode('weak')">Weak Against</button>
-    </section>
-
-    <section class="results" id="results"></section>
-
-    <section class="reset-button">
-      <button onclick="resetType()">Reset Type</button>
-    </section>
+    <div class="chart-download">
+      <a href=../images/Pokematch-Strengths-Weaknesses-Type-Chart-Dark-Mode.jpg" target="_blank">
+        <img src="../images/Pokematch-Strengths-Weaknesses-Type-Chart-Dark-Mode.jpg" alt="Pokemon strengths and weaknesses dark mode type chart thumbnail" class="thumbnail">
+      </a>
+      <a href="../images/Pokematch-Strengths-Weaknesses-Type-Chart-Dark-Mode.jpg" download class="download-button">Download Dark Mode
+      <img src="/icons/moon-solid.png" alt="moon pixel icon"></a>
+    </div>
+  </section>
 
     <section class="about-section">
-      <h2>About PokéMatch</h2>
-      <p><strong>PokéMatch is a fan-made tool designed to help you understand Pokémon type matchups in a way that actually sticks.</strong></p>
-      <p>Instead of memorising long type charts, you'll find simple, visual answers like: <em>Water puts out Fire. Bugs don't like Fire. Electricity zaps Flying types.</em> All paired with icons and memory tips to make it easier to learn and remember.</p>
-      <p>I originally built PokéMatch to help myself. Playing through Scarlet and Violet, especially the Tera Raids, I realised just how tricky things can get. Some Pokémon have multiple types, some have Tera Types, and suddenly you're not just guessing - you're losing.</p>
-      <p>I needed a tool that let me instantly check type strengths and weaknesses, and understand <em>why</em> those matchups made sense. The first time I used PokéMatch during a 5-star Tera Raid against an Orthworm, it worked. I picked the right type and actually won.</p>
-      <p>Since then, it's become my mission: learn the matchups, win more raids, and stock up on enough Herba Mystica to make the best sandwiches in all of Paldea 🧢 🥪</p>
-      <p>If you're on the same journey, this site's for you.</p>
+        <h2>Learn Pokémon Strengths and Weaknesses - The Easy Way</h2>
+        <p>Looking to master Pokémon type matchups? This downloadable Pokémon Strengths and Weaknesses Chart is a simple, visual guide to help you understand what each type is strong against - and where it's vulnerable. Whether you're training for battle, using a type calculator, or just learning for fun, this chart explains type effectiveness in a clear, beginner-friendly format. Use it as a reference, print it out, or share it with friends. It's your go-to table for smart, strategic decisions.</p>
     </section>
 
     <section class="donation-section">
@@ -72,7 +73,7 @@
       <a href="https://ko-fi.com/pokematch" target="_blank" class="donate-button">Buy me a coffee ☕</a>
     </section>
 
-  </main>
+</main>
 
   <div id="footer"></div>
 
